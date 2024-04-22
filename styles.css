@@ -4,3 +4,23 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+.background-image-container {
+  background-image: url("https://raw.githubusercontent.com/JohnMellet/Img-hosting/main/PubIMG/pic8.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  flex: 1;
+}
+
+.main-content-container {
+  min-height: 100vh;
+  flex: 2;
+}
