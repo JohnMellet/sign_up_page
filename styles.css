@@ -24,3 +24,51 @@ body {
   min-height: 100vh;
   flex: 2;
 }
+
+.background-container-band {
+  background: rgba(105, 105, 105, 0.596);
+  color: white;
+  margin-top: 300px;
+  min-height: 150px;
+
+  font-size: 1.5em;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.form-text-container {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.form-content-container {
+  flex: 3;
+}
+
+.form-row {
+  display: flex;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+label {
+  display: flex;
+}
