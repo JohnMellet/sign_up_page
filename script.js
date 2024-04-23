@@ -12,6 +12,31 @@ signUpForm.addEventListener("submit", (e) => {
   validateInputs();
 });
 
+function validateInputs() {
+  const firstNameValue = firstName.value.trim();
+  const lastNameValue = lastName.value.trim();
+  const emailValue = userEmail.value.trim();
+  const numberValue = userNumber.value.trim();
+  const passwordValue = password.value.trim();
+  const confirmPasswordValue = confirmPassword.value.trim();
+
+  if (
+    firstNameValue === "" ||
+    !isName(firstNameValue) ||
+    lastNameValue === "" ||
+    !isName(lastNameValue)
+  ) {
+    // show error message
+  }
+
+  if (emailValue === "" || !isEmail(emailValue)) {
+    // show error
+  }
+
+  if (numberValue === "" || !isPhoneNumber(numberValue)) {
+    // show error
+  }
+}
 function isName(name) {
   return /^[a-zA-Z]+$/.test(name);
 }
