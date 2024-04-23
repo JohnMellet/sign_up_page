@@ -72,3 +72,8 @@ body {
 label {
   display: flex;
 }
+
+input:focus {
+  outline: 2px solid rgb(82, 126, 223);
+  box-shadow: 0 0 5px rgb(151, 173, 221);
+}
