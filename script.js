@@ -20,32 +20,42 @@ function validateInputs() {
   const passwordValue = password.value.trim();
   const confirmPasswordValue = confirmPassword.value.trim();
 
-  if (
-    firstNameValue === "" ||
-    !isName(firstNameValue) ||
-    lastNameValue === "" ||
-    !isName(lastNameValue)
-  ) {
+  if (firstNameValue === "" || !isName(firstNameValue)) {
     showError(firstName, "Please enter a valid first name.");
+  } else {
+    showValid(firstName);
+  }
+
+  if (lastNameValue === "" || !isName(lastNameValue)) {
     showError(lastName, "Please enter a valid last name.");
+  } else {
+    showValid(lastName);
   }
 
   if (emailValue === "" || !isEmail(emailValue)) {
     showError(userEmail, "Please enter a valid email");
+  } else {
+    showValid(userEmail);
   }
 
   if (numberValue === "" || !isPhoneNumber(numberValue)) {
     showError(userNumber, "test");
+  } else {
+    showValid(userNumber);
   }
 
   if (passwordValue === "") {
     showError(password, "Please enter a password.");
   } else if (!isPassword(passwordValue)) {
     showError(password, "Please enter a valid password.");
+  } else {
+    showValid(password);
   }
 
   if (passwordValue !== confirmPasswordValue) {
     showError(confirmPassword, "Passwords do not match.");
+  } else {
+    showValid(confirmPassword);
   }
 }
 
@@ -54,6 +64,7 @@ const showError = (input, errorMessage) => {
   const errorText = parentContainer.querySelector(".error-text");
 
   errorText.innerText = errorMessage;
+  input.classList.add("error-border");
 };
 
 const isName = (name) => {
@@ -76,4 +87,11 @@ const isPassword = (password) => {
   return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+}{":;'?/>.<,])(?=.*[^\s]){8,}$/.test(
     password
   );
+};
+
+const showValid = (input) => {
+  input.classList.add("valid-border");
+  const parentContainer = input.parentElement;
+  const errorText = parentContainer.querySelector(".error-text");
+  errorText.innerText = "";
 };
