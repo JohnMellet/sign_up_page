@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
     <title>Sign-Up Form</title>
   </head>
   <body>
@@ -24,27 +25,27 @@
             <p>Lets do this!</p>
             <form id="sign-up-form">
                 <div class="form-row">
-                    <div class="form-styles"><label for="first-name">First Name</label><input id="first-name" type="text" name="firstName"></div>
-                    <p class="error-text"></p>
+                    <div class="form-styles">
+                        <label for="first-name">First Name</label><input id="first-name" type="text" name="firstName"><p class="error-text"></p>
+                    </div>
+                    <div class="form-styles">
+                        <label for="last-name">Last Name</label><input id="last-name" type="text" name="lastName"><p class="error-text"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-styles"><label for="user-email">Email</label><input id="user-email" type="email" name="userEmail"><p class="error-text"></p></div>
+                    
 
-                    <div class="form-styles"><label for="last-name">Last Name</label><input id="last-name" type="text" name="lastName"></div>
-                    <p class="error-text"></p>
+                    <div class="form-styles"><label for="user-phone-number">Number</label><input id="user-phone-number" type="text"><p class="error-text"></p></div>
+                    
 
                 </div>
                 <div class="form-row">
-                    <div class="form-styles"><label for="user-email">Email</label><input id="user-email" type="email" name="userEmail"></div>
-                    <p class="error-text"></p>
+                    <div class="form-styles"><label for="user-password">Password</label><input id="user-password" type="password" name="passwords"><p class="error-text"></p></div>
+                    
 
-                    <div class="form-styles"><label for="user-phone-number">Number</label><input id="user-phone-number" type="text"></div>
-                    <p class="error-text"></p>
-
-                </div>
-                <div class="form-row">
-                    <div class="form-styles"><label for="user-password">Password</label><input id="user-password" type="password" name="passwords"></div>
-                    <p class="error-text"></p>
-
-                    <div class="form-styles"><label for="user-password-confirm">Confirm Password</label><input id="user-password-confirm" type="password" name="passwords"></div>
-                    <p class="error-text"></p>
+                    <div class="form-styles"><label for="user-password-confirm">Confirm Password</label><input id="user-password-confirm" type="password" name="passwords"><p class="error-text"></p></div>
+                    
 
                 </div>
                 <div class="form-button-container">
@@ -53,6 +54,6 @@
                 </div>
             </form>
         </div>
-    <script src="script.js"></script>
+    
   </body>
 </html>
