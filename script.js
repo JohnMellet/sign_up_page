@@ -52,7 +52,7 @@ function validateInputs() {
     showValid(password);
   }
 
-  if (passwordValue !== confirmPasswordValue) {
+  if (passwordValue !== confirmPasswordValue || confirmPasswordValue === "") {
     showError(confirmPassword, "Passwords do not match.");
   } else {
     showValid(confirmPassword);
@@ -64,6 +64,7 @@ const showError = (input, errorMessage) => {
   const errorText = parentContainer.querySelector(".error-text");
 
   errorText.innerText = errorMessage;
+  input.classList.remove("valid-border");
   input.classList.add("error-border");
 };
 
