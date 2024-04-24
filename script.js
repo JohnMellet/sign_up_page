@@ -5,6 +5,7 @@ const userEmail = document.getElementById("user-email");
 const userNumber = document.getElementById("user-phone-number");
 const password = document.getElementById("user-password");
 const confirmPassword = document.getElementById("user-password-confirm");
+const submitBtn = document.querySelector(".btn");
 
 signUpForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -26,17 +27,34 @@ function validateInputs() {
     lastNameValue === "" ||
     !isName(lastNameValue)
   ) {
-    // show error message
+    showError(firstName, "Please enter a valid first name.");
+    showError(lastName, "Please enter a valid last name.");
   }
 
   if (emailValue === "" || !isEmail(emailValue)) {
-    // show error
+    showError(emailValue, "Please enter a valid email");
   }
 
   if (numberValue === "" || !isPhoneNumber(numberValue)) {
-    // show error
+    showError(numberValue, "test");
+  }
+
+  if (
+    passwordValue === "" ||
+    !isPassword(passwordValue) ||
+    passwordValue !== confirmPasswordValue
+  ) {
+    showError(passwordValue, "test");
   }
 }
+
+function showError(input, errorMessage) {
+  const parentContainer = input.parentElement;
+  const errorText = parentContainer.querySelector(".error-text");
+
+  errorText.innerText = errorMessage;
+}
+
 function isName(name) {
   return /^[a-zA-Z]+$/.test(name);
 }
