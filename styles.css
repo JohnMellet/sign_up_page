@@ -69,27 +69,14 @@ body {
 .input-container {
   width: 100%;
   padding: 30px 50px;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .form-row {
   display: flex;
   gap: 100px;
   margin-top: 20px;
-}
-
-.form-button-container {
-}
-
-.btn {
-  padding: 40px 100px;
-  background-color: #25332a;
-  color: white;
-  border-radius: 10px;
-  font-size: 1.2em;
-  font-weight: bolder;
-  margin: 43px;
-  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
 
 label {
@@ -125,15 +112,25 @@ input:focus {
   box-shadow: 0 0 5px rgb(131, 248, 85);
 }
 
-a {
-  color: #25332a;
-  text-decoration: none;
-  font-size: 1.3em;
+.btn {
+  padding: 30px 40px;
+  background-color: #25332a;
+  color: white;
+  font-size: 1.8em;
   font-weight: bolder;
+  border-radius: 8px;
+  margin: 43px;
+  box-shadow: 0px 5px 5px darkgrey;
+}
+
+a {
+  text-decoration: none;
+  color: forestgreen;
+  font-size: 1.8em;
+  margin-left: 15px;
 }
 
 a:visited {
-  text-decoration: none;
   color: #25332a;
 }
 
@@ -141,7 +138,7 @@ a:visited {
   background-color: #f5f5f5;
 }
 
-.form-button-container > p {
+.form-button-container p {
+  font-size: 1.4em;
   margin-left: 48px;
-  font-size: 1.1em;
 }
